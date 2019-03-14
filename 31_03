@@ -1,10 +1,10 @@
 Определите функцию, заменяющую в исходноим списке все вхождения заданного значения другим.
 
-(defun zam (lst w r)
+(defun zam (lst a b)
   (cond ((null lst) nil)
-        (( eq (car lst) w) (cons r (zam (cdr lst) w r)))
-        ((listp (car lst)) (cons (zam (car lst) w r) (zam (cdr lst) w r)))
-        (t (cons (car lst) (zam (cdr lst) w r))))) 
+        (( eq (car lst) a) (cons b (zam (cdr lst) a b)))
+        ((listp (car lst)) (cons (zam (car lst) a b) (zam (cdr lst) a b)))
+        (t (cons (car lst) (zam (cdr lst) a b))))) 
         
         Input:
         
