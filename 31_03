@@ -1,0 +1,19 @@
+Определите функцию, заменяющую в исходноим списке все вхождения заданного значения другим.
+
+(defun zam (lst w r)
+  (cond ((null lst) nil)
+        (( eq (car lst) w) (cons r (zam (cdr lst) w r)))
+        ((listp (car lst)) (cons (zam (car lst) w r) (zam (cdr lst) w r)))
+        (t (cons (car lst) (zam (cdr lst) w r))))) 
+        
+        Input:
+        
+        (print (rep '(2 3 1 5 2 2) 2 'c ))
+        (print (rep '((4 2 1) 1 7 5 1) 1 10))
+        (print (rep '( 4 2 3 ((5 4 6) (1 2 4)) ) 4 '( 10 11 )))
+        
+        Output:
+        
+        (C 3 1 5 C C) 
+        ((4 2 10) 10 7 5 10)
+        ((10 11) 2 3 ((5 (10 11) 6) (1 2 (10 11)))) 
