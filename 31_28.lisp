@@ -1,11 +1,19 @@
 Определите функцию, вычисляющую, сколько всего атомов в списке (списочной структуре).
 
-(defun atom (str)
- (cond
- ((null str) 0)
- ((atom str) 1)
- (T (+ (atom (car str)) (atom (cdr str))))))
+  
+(defun atomcount (expr)
+    (cond
+     ((null expr) 0)
+     ((atom expr) 1)
+     (T (+ (atomcount (car expr)) (atomcount (cdr expr))))))
 
 Test:
+
+;>(print (atomcount  `(1 2 4)))
+
+
+
+
+;> 3
 
 
