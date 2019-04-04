@@ -9,11 +9,13 @@
 
 Test:
 
-;>(print (atomcount  `(1 2 4)))
+;>(print (atomcount `(1 2 4)))
+;>(print (atomcount `()))
+;>(print (atomcount `(1)))
 
 
-
-
-;> 3
+;> (3)
+;> (0)
+;> (1)
 
 
