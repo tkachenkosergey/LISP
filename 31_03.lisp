@@ -1,6 +1,6 @@
 Определите функцию, заменяющую в исходном списке все вхождения заданного значения другим.
 
-(defun rep (&key lst  obj  change)
+(defun rep (&key lst  obj change)
     ((lambda ( x y )      
             (cond   
                     ((null lst) nil)
@@ -8,7 +8,7 @@
                     ((listp x) (cons (rep :lst x :obj obj  :change change) (rep :lst y :obj obj  :change change)))
                     (t (cons x (rep :lst y :obj obj  :change change)))))  
     (car lst)
-    (cdr lst ))) 
+    (cdr lst))) 
  
 Test:
 
