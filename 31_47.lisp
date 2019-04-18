@@ -6,10 +6,10 @@
 
 (setf (get 'apple 'color) 'green) 
 (setf (get 'apple 'size) 'big) 
-(setf (get 'apple 'weight ) 4) 
+(setf (get 'apple 'weight) 4) 
 
 (print (symbol-plist  'apple )) ; => (WEIGHT 4 SIZE BIG COLOR GREEN) 
 
 
-(удалить-все-свойства   'apple) 
-(print (symbol-plist  'apple )) ; =>  NIL
+(удалить-все-свойства 'apple) 
+(print (symbol-plist 'apple)) ; =>  NIL
