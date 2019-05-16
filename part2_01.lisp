@@ -3,4 +3,4 @@
 (defun .funcall (f &rest args)
     (apply f args))
 
-(print (.funcall #' + 4 10 19)) ;=>33
+(print (.funcall '+ 4 10 19)) ;=>33
