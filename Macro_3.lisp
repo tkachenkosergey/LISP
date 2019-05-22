@@ -3,7 +3,7 @@
 
 (defmacro moyif (условие р q)
     `(if ,условие ,р ,q))
-    
-(setq x '(a b c))
+    (setq x '(a b c))
+
 (print (moyif (atom x) 'yes 'no)) ;NO
 (print (moyif (listp x) 'yes 'no)) ;YES
